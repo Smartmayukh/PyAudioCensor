@@ -1,4 +1,6 @@
-# PyAudioCensor
+# PyAudioCensor 
+
+### Copyright (c) 2023 Mayukhmali Das
 
 Firstly we have to give the audio file to be censored. Then we perform offline speech recognition on the audio using Vosk api. Thus we will get a list of words with their respective timestamps. Now the user will input which words to censor. The respective timestamps of those words are found out and then the censor audio provided by the user is overlaid at those instances.  
 
