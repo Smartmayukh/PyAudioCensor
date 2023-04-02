@@ -5,9 +5,9 @@ I created my own python package named PyAudioCensor. Firstly we have to give the
 
 
 Audio files can be automatically censored using the censor_audio function of my PyAudioCensor module. Process will be completely offline.
-
-![image](https://user-images.githubusercontent.com/64318469/229348936-efbff973-5ebd-4536-b886-d6b3d21da5e6.png)
-
+<pre>
+def censor_audio(base_audio_path, censor_audio_path, output_audio_path, model_path, to_censor, gain_of_censor=0, gain_of_base=-40,  silent=1):
+</pre>
 
 ## Description of function parameters: 
 
@@ -31,11 +31,13 @@ The location where the censored audio will be stored.
 ### Model_path: 
 
 Path for the Vosk Model https://alphacephei.com/vosk/models
+### Download a model from the Vosk website and save in the model folder. The file is too big to upload in Github. You can also find a google drive link at the bottom of the readme which has the complete package along with the model preinstalled.
 
 Vosk API is a speech recognition toolkit developed by Alpha Cephei Inc., which is based on the Kaldi toolkit. Kaldi is a free and open-source toolkit for speech recognition developed by the Johns Hopkins University Speech and Language Processing Group. It uses modern machine learning techniques, including deep neural networks, to achieve high accuracy and efficiency.
 
 The offline speech recognition with timestamps part is done with the help of Dmytro Nikolaiev work referenced below: 
 https://gitlab.com/Winston-90/foreign_speech_recognition/-/tree/main/timestamps
+
 
 
 
@@ -64,9 +66,12 @@ Make base audio silent while overlaying the censor audio.
 
 I will be demonstrating the working of this package using the song "Happier" by Marshmello
 
+<pre>
+from PyAudioCensor import main
 
-![image](https://user-images.githubusercontent.com/64318469/229349029-62efd143-ccad-45d2-a6e5-914c29f78227.png)
 
+main.censor_audio("base_audio.wav","overlay_audio.wav","censored.wav",model_path="PyCensorAudio\model", to_censor=["happier","morning","story","mind"],silent=1)
+</pre>
 
 
 
