@@ -1,1 +1,1 @@
-Copy your model that you have downloaded here
+Copy the model that you have downloaded here
