@@ -2,6 +2,12 @@
 
 ### Copyright (c) 2023 Mayukhmali Das
 
+</br>
+
+#### Note install vosk using pip install vosk before running the module. Also download a specific vosk model and put it in the model folder. 
+</br>
+
+
 Firstly we have to give the audio file to be censored. Then we perform offline speech recognition on the audio using Vosk api. Thus we will get a list of words with their respective timestamps. Now the user will input which words to censor. The respective timestamps of those words are found out and then the censor audio provided by the user is overlaid at those instances.  
 
 
