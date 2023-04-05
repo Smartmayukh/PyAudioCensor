@@ -4,10 +4,19 @@
 
 </br>
 
-#### Note install vosk using pip install vosk before running the module. Also download a specific vosk model and put it in the model folder. 
+
+
+
+![image](https://user-images.githubusercontent.com/64318469/230177063-b2a367b7-8ab5-4879-bd58-6c6c7b164a73.png)
+
+Pypi package has been already deployed. Install using 
+
+<pre>pip install PyAudioCensor==0.0.1
+</pre>
+
+### Note install vosk using pip install vosk before running the module. Also download a specific vosk model and put it in a model folder. Specify that model path in model_path input of the main function of the PyAudioCensor module. 
+
 </br>
-
-
 Firstly we have to give the audio file to be censored. Then we perform offline speech recognition on the audio using Vosk api. Thus we will get a list of words with their respective timestamps. Now the user will input which words to censor. The respective timestamps of those words are found out and then the censor audio provided by the user is overlaid at those instances.  
 
 
